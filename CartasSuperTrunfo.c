@@ -6,6 +6,8 @@ char cidade [30];
 char codigo [15];
 float pib ;
 float km;
+float denPop;
+float pibpc;
 //variaveis estado 2 !
 int tur2;
 float pop2;
@@ -13,6 +15,8 @@ char cidade2[30];
 char cod2[15];
 float pib2;
 float km2;
+float denPopu;
+float pibPc;
 // fim das variaveis 
 
 printf("-------------Cadastro---------------\n");
@@ -34,6 +38,12 @@ printf("-------------Cadastro---------------\n");
 
  printf("Digite o Codigo para representar sua Cidade: ");
  scanf("%s", &codigo);
+
+ denPop = populacao / km ;
+ pibpc = populacao / pib ;
+
+ printf("A densidade populacional é : %f \n", denPop);
+ printf("O PIB per capta é : %f \n", pibpc);
 
  printf("-----Cidade %s-----\n-----CADASTRADA COM SUCESSO-----\n\n",cidade);
  // realizando o cadastro do estado 2 
@@ -57,6 +67,12 @@ printf("-------------Cadastro---------------\n");
 
  printf("Digite o Codigo para representar sua Cidade: ");
  scanf("%s", &cod2);
+
+ denPopu = pop2 / km2 ;
+ pibPc = pop2 / pib2 ;
+
+ printf("A densidade populacional é : %f \n", denPopu);
+ printf("O PIB per capta é : %f \n", pibPc);
 
 
  printf("------Cidade %s-----\n-----CADASTRADO COM SUCESSO-----\n",cidade2);
