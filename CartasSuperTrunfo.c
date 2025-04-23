@@ -6,8 +6,11 @@ char cidade [30];
 char codigo [15];
 float pib ;
 float km;
+// aventureiro
 float denPop;
 float pibpc;
+//mestre
+float superpoder1 ;
 //variaveis estado 2 !
 int tur2;
 float pop2;
@@ -15,8 +18,11 @@ char cidade2[30];
 char cod2[15];
 float pib2;
 float km2;
+// aventureiro
 float denPopu;
 float pibPc;
+// mestre
+float superpoder2 ;
 // fim das variaveis 
 
 printf("-------------Cadastro---------------\n");
@@ -44,6 +50,10 @@ printf("-------------Cadastro---------------\n");
 
  printf("A densidade populacional é : %f \n", denPop);
  printf("O PIB per capta é : %f \n", pibpc);
+
+ superpoder1 = populacao + km + denPop + pib;
+
+ printf("Superpoder somado é : %.3f \n",superpoder1);
 
  printf("-----Cidade %s-----\n-----CADASTRADA COM SUCESSO-----\n\n",cidade);
  // realizando o cadastro do estado 2 
@@ -74,8 +84,37 @@ printf("-------------Cadastro---------------\n");
  printf("A densidade populacional é : %f \n", denPopu);
  printf("O PIB per capta é : %f \n", pibPc);
 
+ superpoder2 = pop2 + km2 + denPopu + pib2;
+
+
+ printf("Superpoder somado é : %.3f \n",superpoder2);
 
  printf("------Cidade %s-----\n-----CADASTRADO COM SUCESSO-----\n",cidade2);
+
+
+ printf("\n---------- COMPARAÇÕES BINÁRIAS ENTRE AS CIDADES ----------\n");
+
+// População
+printf("População (1 = %s venceu): %d\n", cidade, populacao > pop2);
+
+// PIB
+printf("PIB (1 = %s venceu): %d\n", cidade, pib > pib2);
+
+// PIB per Capita
+printf("PIB per Capita (1 = %s venceu): %d\n", cidade, pibpc > pibPc);
+
+// Área
+printf("Área Territorial (1 = %s venceu): %d\n", cidade, km > km2);
+
+// Densidade Populacional (menor = melhor, então invertemos a lógica)
+printf("Densidade Populacional Invertida (1 = %s venceu): %d\n", cidade, denPop < denPopu);
+
+// Pontos Turísticos
+printf("Pontos Turísticos (1 = %s venceu): %d\n", cidade, turistico > tur2);
+
+// SuperPoder
+printf("SuperPoder (1 = %s venceu): %d\n", cidade, superpoder1 > superpoder2);
+
 
 
     return 0;
